@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppOdev.RenkSecici"
+             Title="Renk Seçici">
+
+    <StackLayout Padding="20">
+        <StackLayout Orientation="Vertical">
+            <Label x:Name="redLabel" Text="Kırmızı Ton:" VerticalOptions="Center" TextColor="#921d2a"/>
+            <Slider x:Name="redSlider" Minimum="0" Maximum="255" Value="0" WidthRequest="200"
+                    ThumbColor="#921d2a" MinimumTrackColor="#921d2a"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical">
+            <Label x:Name="greenLabel" Text="Yeşil Ton:" VerticalOptions="Center" TextColor="#70a020"/>
+            <Slider x:Name="greenSlider" Minimum="0" Maximum="255" Value="0" WidthRequest="200"
+                    ThumbColor="#70a020" MinimumTrackColor="#70a020"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical">
+            <Label x:Name="blueLabel" Text="Mavi Ton:" VerticalOptions="Center" TextColor="#235ea8"/>
+            <Slider x:Name="blueSlider" Minimum="0" Maximum="255" Value="0" WidthRequest="200"
+                    ThumbColor="#235ea8" MinimumTrackColor="#235ea8"/>
+        </StackLayout>
+
+        <Label x:Name="colorCode" Text="Renk Kodu = #000000" Margin="0,10">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ColorCode_Tapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+
+        <Button Text="Random" Clicked="RandomButton_Clicked" Margin="0,10" BackgroundColor="#494044" TextColor="#d6e4e7"/>
+
+        <BoxView x:Name="colorPreview" WidthRequest="200" HeightRequest="50"/>
+    </StackLayout>
+</ContentPage>
+
